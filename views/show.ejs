@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+    <h1>BOOKS INFORMATION</h1>
+  
+        <% Books.forEach(function(book,index){ %>
+          Book_name: <%= book.name%><br>
+          Author:<%= book.author%><br>
+          Description:<%= book.description%><br> <br>
+          <a href="/details/<%=index%>">Details</a>  <hr>
+          
+        <% }); %>
+       <!-- <a href="/details/index"><details></details></a>  -->
+
+</body>
+</html>

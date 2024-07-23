@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGFnZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+            background-position: center;
+            background-size: cover;
+            background-color: rgb(136, 224, 170);
+        }
+       #box{
+        position: relative;
+        margin-top: 12%;
+        margin-left: 30%;
+        border: 4px solid transparent;
+        /* transform: translate(-50%,-50%); */
+        height: 500px;
+        width: 800px;
+        background-color: rgb(175, 201, 235);/
+        
+        /* filter: blur(5px); */
+
+
+       }
+       #box h1{
+        font-size: 50px;
+        padding: 10px 250px;
+       } 
+       #box input{
+        position: relative;
+        margin-left: 50px;
+        height: 40px;
+        margin-top: 10px;
+        width: 300px;
+        gap: 80px;
+       }
+       button{
+        position: absolute;
+        height: 45px;
+        width: 320px;
+        border: 2px solid  rgb(70, 135, 233);
+        border-radius: 22px;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: rgb(70, 135, 233);
+        left: 28%;
+        margin-top: 8%;
+        cursor: pointer;
+
+       }
+      
+      
+
+
+    </style>
+</head>
+<body>
++
+   <div id="box">
+    <h1>UPDATE </h1>
+     <form action="/update/<%=index%>" method="post">
+        <input  value="<%=book.name%>" type="text" placeholder="name" name="name"> 
+        <input value="<%=book.link%>" type="url" placeholder="link" name="link"><br>
+        <input value="<%=book.author%>" type="text" placeholder="author" name="author">
+        <input value="<%=book.page%>" type="number" placeholder="page" name="page"><br>
+        <input value="<%=book.publication%>" type="text" placeholder="publication" name="publication">
+        <input value="<%=book.year%>" type="number" placeholder="year" name="year"><br>
+        <input value="<%=book.description%>" type="text" name="description" placeholder="description">
+        <input value="<%=book.prize%>" type="number" placeholder="prize" name="prize"><br>
+        <!-- <textarea name="description" id="" placeholder="write description here"></textarea><br> -->
+        <button>Update</button>
+        
+        
+    </form>
+</div>
+</body>
+</html>
